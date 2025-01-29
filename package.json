@@ -3,8 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "workspaces": [
-    "proyects/*"
+    "proyects/**"
   ],
+  "config": {
+  "sui-mono": {
+    "access": "public",
+    "overrides": {
+      "literals": [{
+        "regex": "Lokalise:"
+      }]
+    }
+  },
+    "validate-commit-msg": {
+      "types": "@s-ui/mono/src/types"
+    }
+  },
   "scripts": {
     "co": "sui-mono commit",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +26,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "@s-ui/mono": "^2.45.0"
   }
 }
